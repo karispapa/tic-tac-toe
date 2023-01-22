@@ -10,12 +10,55 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="header">Tic-tac-Toe</h1>
+      <div class="start" id="start">
+        <h1>TIC-TAC-TOE</h1>
+        <button id="start-game">Start Game</button>
+      </div>
       <div class="selection" id="selection">
-        <p>X</p>
-        <p>O</p>
+        <div class="game-mode" id="game-mode">
+          <h1>Game Mode</h1>
+          <button>Computer</button>
+          <button>Two Players</button>
+        </div>
+        <div>
+          <form action="#" class="game-info" id="game-info">
+            <label for="player1">Player 1 Name</label>
+            <input
+              type="text"
+              placeholder="Player 1 Name"
+              name="player1"
+              id="player1"
+              required
+            />
+            <label for="player2" data-player2>Player 2 Name</label>
+            <input
+              type="text"
+              placeholder="Player 2 Name"
+              name="player2"
+              id="player2"
+              data-player2
+            />
+            <label for="rounds">Rounds</label>
+            <input
+              type="number"
+              name="rounds"
+              id="rounds"
+              required
+              placeholder="Rounds"
+            />
+            <input type="submit" value="Continue" />
+          </form>
+        </div>
+        <!-- <div class="select-symbol" id="select-symbol">
+          <h1>Choose Symbol</h1>
+          <div class="symbols" id="symbols">
+            <p>X</p>
+            <p>O</p>
+          </div>
+        </div> -->
       </div>
       <div class="board" id="board">
+        <div class="cell cell_X" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
@@ -24,7 +67,14 @@
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
+      </div>
+    </div>
+    <div class="winning-message" id="winning-message">
+      <h1>Player 1 wins</h1>
+      <div>
+        <button id="quit">Quit</button>
+        <button id="restart">Restart</button>
+        <button id="continue">Continue</button>
       </div>
     </div>
   </body>
